@@ -28,14 +28,14 @@ function displayPersonalInfo(info) {
 }
 
 function displayAboutMe(about) {
-    const container = document.getElementById('aboutMe');
+    const container = document.getElementById('aboutDescription');
     about.forEach(item => {
         container.innerHTML += `<p>${item.Description}</p>`;
     });
 }
 
 function displaySkills(skills) {
-    const container = document.getElementById('skills');
+    const container = document.getElementById('SkillName');
     skills.forEach(item => {
         container.innerHTML += `<p>Skills: ${item.SkillName.join(', ')}</p>`;
     });
