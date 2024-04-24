@@ -28,43 +28,43 @@ function displayPersonalInfo(info) {
 }
 
 function displayAboutMe(about) {
-    const container = document.getElementById('aboutDescription');
+    const container = document.getElementById('aboutMe');
     about.forEach(item => {
-        container.innerHTML += `<p>${item.Description}</p>`;
+        container.innerHTML += <p>${item.Description}</p>;
     });
 }
 
 function displaySkills(skills) {
-    const container = document.getElementById('SkillName');
+    const container = document.getElementById('skills');
     skills.forEach(item => {
-        container.innerHTML += `<p>Skills: ${item.SkillName.join(', ')}</p>`;
+        container.innerHTML += <p>Skills: ${item.SkillName.join(', ')}</p>;
     });
 }
 
 function displayAchievements(achievements) {
     const container = document.getElementById('achievements');
     achievements.forEach(item => {
-        container.innerHTML += `<p>${item.Date}: ${item.Description}</p>`;
+        container.innerHTML += <p>${item.Date}: ${item.Description}</p>;
     });
 }
 
 function displayInterests(interests) {
     const container = document.getElementById('interests');
     interests.forEach(item => {
-        container.innerHTML += `<p>${item.Description}</p>`;
+        container.innerHTML += <p>${item.Description}</p>;
     });
 }
 
 function displayEducation(education) {
     const container = document.getElementById('education');
     education.forEach(item => {
-        container.innerHTML += `<p>${item.Level} at ${item.School} (${item.Year})</p>`;
+        container.innerHTML += <p>${item.Level} at ${item.School} (${item.Year})</p>;
     });
 }
 
 function displayAttributes(attributes) {
     const container = document.getElementById('attributes');
     attributes.forEach(item => {
-        container.innerHTML += `<p>${item.Attribute}: ${item.Attribute_Description}</p>`;
+        container.innerHTML += <p>${item.Attribute}: ${item.Attribute_Description}</p>;
     });
 }
