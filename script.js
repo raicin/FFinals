@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
     fetch(apiUrl)
         .then(response => response.json())
         .then(data => {
-            displayPersonalInfo(data.Personal_Information);
+            displayPersonalInformation(data.Personal_Information);
             displayAboutMe(data.About_Me);
             displaySkills(data.Skills);
             displayAchievements(data.Achievements);
@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function displayPersonalInfo(info) {
-    const container = document.getElementById('personalInfo');
+    const container = document.getElementById('Personal_Information');
     info.forEach(item => {
         container.innerHTML += `<p>Name: ${item.name}</p>
                                 <p>Birthdate: ${item.Birthdate}</p>
