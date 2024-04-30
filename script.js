@@ -18,12 +18,12 @@ document.addEventListener('DOMContentLoaded', function() {
 function displayPersonalInfo(info) {
     const container = document.getElementById('personalInfo');
     info.forEach(item => {
-        container.innerHTML += `<p>Name: ${item.name}</p>
-                                <p>Birthdate: ${item.Birthdate}</p>
-                                <p>Gender: ${item.Gender}</p>
-                                <p>Contact No: ${item.ContactNo}</p>
-                                <p>Address: ${item.Address}</p>
-                                <p>Email: ${item.Email}</p>`;
+        container.innerHTML += `<li>Name: ${item.name}</li>
+                                <li>Birthdate: ${item.Birthdate}</li>
+                                <li>Gender: ${item.Gender}</li>
+                                <li>Contact No: ${item.ContactNo}</li>
+                                <li>Address: ${item.Address}</li>
+                                <li>Email: ${item.Email}</li>`;
     });
 }
 
