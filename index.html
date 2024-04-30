@@ -3,42 +3,56 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Profile Page</title>
+    <title>Finals Project</title>
     <style>
       body {
-        font-family: "Arial", sans-serif;
-        background-color: #f9f9f9;
-        color: #333;
-        margin: 0;
-        padding: 20px;
-        line-height: 1.6;
+    font-family: "Arial", sans-serif;
+    background-image: linear-gradient(160deg, rgb(119, 176, 170), rgb(227, 254, 247), rgb(255, 208, 208), #FFFF);
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    line-height: 1.6;
       }
-
+    
       h1 {
-        color: #555;
+        color: #f4eded;
         text-align: center;
         margin-bottom: 50px;
       }
 
-      h3 {
+      h2 {
         color: #555;
-        text-align: center;
-        margin-bottom: 50px; 
+        text-align: left;
+        margin-bottom: 25px; 
       }
+
+     .profile-content {
+    display: flex;
+    align-items: center; 
+    gap: 20px; 
+  }
+
+  #profileImage {
+    width: 245px; 
+    height: auto; 
+    border-radius: 10px; 
+  }
 
       ul,
       p {
         padding: 10px;
-        background: white;
-        border-radius: 8px;
+        background: rgb(255, 255, 255);
+        border-radius: 10px;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         margin-bottom: 20px;
         padding-left: 20px;
+        padding-right: 20px;
       }
 
       li,
       p {
         margin: 10px 0;
+        padding-right: 20px;
       }
 
       #personalInfo li,
@@ -60,16 +74,20 @@
   <body>
     <div class="container">
       <h1>Profile Information</h1>
-      <ul id="personalInfo"></ul>
+      <div class="profile-content">
+        <img src="1x1 picture.jpg" alt="Profile Image" id="profileImage">
+         <ul id="personalInfo"></ul>
+      </div>
+      <h2>About Me</h2>
       <p id="aboutMe"></p>
       <ul id="skills"></ul>
-      <h3>Achievements</h3>
+      <h2>Achievements</h2>
       <ul id="achievements"></ul>
-      <h3>Interests</h3>
+      <h2>Interests</h2>
       <p id="interests"></p>
-      <h3>Education</h3>
+      <h2>Education</h2>
       <ul id="education"></ul>
-      <h3>Attributes</h3>
+      <h2>Attributes</h2>
       <ul id="attributes"></ul>
     </div>
 
