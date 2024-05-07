@@ -8,8 +8,9 @@ document.addEventListener('DOMContentLoaded', function() {
             displayAboutMe(data.About_Me);
             displaySkills(data.Skills);
             displayAchievements(data.Achievements);
-            displayEducation(data.Education);
             displayInterests(data.Interests);
+            displayEducation(data.Education);
+            displayAttributes(data.Personal_Attributes);
         })
         .catch(error => console.error('Error fetching data:', error));
 });
@@ -17,13 +18,13 @@ document.addEventListener('DOMContentLoaded', function() {
 function displayPersonalInfo(info) {
     const container = document.getElementById('personalInfo');
     info.forEach(item => {
-    container.innerHTML = `<h1>${item.name}</h1>
-                           <li>Birth date: ${item.Birthdate}</li>
-                           <li>Gender: ${item.Gender}</li>
-                           <li>Contact: ${item.ContactNo}</li>
-                           <li>Phone: ${item.Address}</li>
-                           <li>Address: ${item.Email}</li>`;
-                        })
+        container.innerHTML += `<li>Name: ${item.name}</li>
+                                <li>Birthdate: ${item.Birthdate}</li>
+                                <li>Gender: ${item.Gender}</li>
+                                <li>Contact No: ${item.ContactNo}</li>
+                                <li>Address: ${item.Address}</li>
+                                <li>Email: ${item.Email}</li>`;
+    });
 }
 
 function displayAboutMe(about) {
@@ -35,20 +36,8 @@ function displayAboutMe(about) {
 
 function displaySkills(skills) {
     const container = document.getElementById('skills');
-    // Clear existing skills content
-    container.innerHTML = '';
-
-    // Assuming that 'skills' is an array of objects each containing a SkillName array
-    skills.forEach(skillGroup => {
-        // Check if SkillName is indeed an array and has items
-        if (Array.isArray(skillGroup.SkillName) && skillGroup.SkillName.length) {
-            skillGroup.SkillName.forEach(skill => {
-                // Create a new list item for each skill
-                const li = document.createElement('li');
-                li.textContent = skill;
-                container.appendChild(li);
-            });
-        }
+    skills.forEach(item => {
+        container.innerHTML += `<p>Skills: ${item.SkillName.join(', ')}</p>`;
     });
 }
 

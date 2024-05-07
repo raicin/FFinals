@@ -3,253 +3,94 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Profile Information</title>
-    <link
-      href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic|Open+Sans:300,400,500,700|Waiting+for+the+Sunrise|Shadows+Into+Light"
-      rel="stylesheet"
-      type="text/css"
-    />
+    <title>Finals Project</title>
     <style>
-      *,
-      *:before,
-      *:after {
-        -moz-box-sizing: border-box;
-        -webkit-box-sizing: border-box;
-        box-sizing: border-box;
-      }
-
-      html {
-        font-size: 100%;
-      }
-
       body {
-        -webkit-font-smoothing: antialiased;
-        color: #707051e1;
-        font-family: Lora, serif;
-        font-size: 18px;
-        font-weight: 400;
-        line-height: 1.4;
-        text-rendering: optimizeLegibility;
+    font-family: "Arial", sans-serif;
+    background-image: linear-gradient(160deg, rgb(119, 176, 170), rgb(227, 254, 247), rgb(255, 208, 208), #FFFF);
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    line-height: 1.6;
       }
-
-      .skill-set li:hover {
-        background: #4993c4;
-      }
-
+    
       h1 {
-        color: rgba(0, 0, 0, 0.75);
-      }
-
-      .wrapper {
-        height: 100%;
-      }
-
-      .left {
-        background-color: rgba(0, 0, 0, 0.025);
-        border-right: 1px solid rgba(0, 0, 0, 0.05);
-        float: right;
-        height: 100%;
-        margin-left: -1px;
-        min-width: 256px;
-        position: fixed;
-        width: 33.33%;
-      }
-
-      .left::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: url('cube.jpg');
-    background-size: cover;
-    background-position: center;
-    opacity: 0.2;  
-    z-index: -1;  
-}
-
-      .right {
-        float: right;
-        height: 100%;
-        position: relative;
-        width: 66.66%;
-      }
-
-      .name-hero {
-        position: relative;
-        width: 100%; /* Take the full width of its container */
-        text-align: center; /* Center-aligns all content */
-        margin: 34px auto;
-        padding-top: 10px; /* Provides space at the top */
-      }
-
-      .me-img {
-        width: 190px; /* Fixed width */
-        height: 160px; /* Maintain aspect ratio */
-        border-radius: 50%; /* Circle shape */
-        margin: 58px auto; /* Center horizontally */
-        display: block; /* Makes the div behave like a block for centering purposes */
-        background-size: cover; /* Ensures the background image covers the div */
-      }
-
-      .me-img img {
-        width: 100%; 
-        height: auto;
-        border-radius: 50%; 
-      }
-
-      .name-text {
-        margin-top: 100%; 
-      }
-
-      .name-hero h1 {
-        font-family: Open Sans, sans-serif;
-        font-size: 1.5em;
+        color: #f4eded;
         text-align: center;
+        margin-bottom: 50px;
       }
 
-      .name-hero h1 em {
-        color: rgba(0, 0, 0, 0.3);
-        font-style: normal;
-        font-weight: 700;
+      h2 {
+        color: #555;
+        text-align: left;
+        margin-bottom: 25px; 
       }
 
-      .name-hero p {
-        color: rgba(0, 0, 0, 0.75);
-        font-size: 0.75em;
-        line-height: 1.5;
-        margin: 0 8px 0 0;
-        text-align: center;
+     .profile-content {
+    display: flex;
+    align-items: center; 
+    gap: 20px; 
+  }
+
+  #profileImage {
+    width: 245px; 
+    height: auto; 
+    border-radius: 10px; 
+  }
+
+      ul,
+      p {
+        padding: 10px;
+        background: rgb(255, 255, 255);
+        border-radius: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
+        padding-left: 20px;
+        padding-right: 20px;
       }
 
-      .name-hero .name-text {
-        margin: 84px auto;
-        width: 85%;
+      li,
+      p {
+        margin: 10px 0;
+        padding-right: 20px;
       }
 
-      .inner {
-        margin: 0 auto;
-        max-width: 975px;
-        padding: 3em;
-      }
-
-      .inner h1 {
-        font-size: 1.75em;
-      }
-
-      .inner p {
-        color: rgba(0, 0, 0, 0.5);
-      }
-
-      .inner p em {
-        color: rgba(0, 0, 0, 1);
-        font-style: normal;
-      }
-
-      .inner section {
-        margin: 100px auto;
-      }
-
-      ul {
+      #personalInfo li,
+      #skills li,
+      #achievements li,
+      #education li,
+      #attributes li {
         list-style-type: none;
-        margin-top: -10px;
-        max-width: 570px;
-        padding: 0;
       }
 
-      .skill-set li {
-        background: rgba(0, 0, 0, 0.75);
-        border-radius: 5px;
-        color: #fff;
-        display: inline-block;
-        list-style: none;
-        margin: 8px 18px 9px 0;
-        padding: 9px;
-        text-align: center;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
-      }
-
-      @media screen and (max-width: 48em) {
-        .right,
-        .left {
-          float: none;
-          position: relative !important;
-          width: 100%;
-          min-height: 500px;
-        }
-      }
-      .handmade {
-        text-align: center !important;
-        margin-top: 0px !important;
-      }
-
-      @media screen and (max-width: 75em) {
-        body {
-          font-size: 16px;
-        }
-      }
-
-      @media screen and (max-width: 60em) {
-        body {
-          font-size: 14px;
-        }
-      }
-      .clearfix:after {
-        content: " "; /* Older browser do not support empty content */
-        visibility: hidden;
-        display: block;
-        height: 0;
-        clear: both;
-      }
-      .handmade {
-        text-align: right;
-        margin-top: 100px;
-      }
-      .handmade em {
-        font-family: "Shadows Into Light", cursive;
-        font-size: 1.25em;
-        margin-left: 5px;
+      .container {
+        width: 80%;
+        max-width: 960px;
+        margin: 0 auto;
       }
     </style>
   </head>
+
   <body>
-    <div class="wrapper clearfix">
-      <div class="left">
-        <div class="name-hero">
-          <div class="me-img">
-            <img src="formal pic.jpg" alt="Profile Image" id="profileImage" />
-          </div>
-          <div class="name-text">
-            <ul id="personalInfo"></ul>
-          </div>
-        </div>
+    <div class="container">
+      <h1>Profile Information</h1>
+      <div class="profile-content">
+        <img src="1x1 picture.jpg" alt="Profile Image" id="profileImage">
+         <ul id="personalInfo"></ul>
       </div>
-      <div class="right">
-        <div class="inner">
-          <section>
-            <h1>About Me</h1>
-            <p id="aboutMe"></p>
-          </section>
-          <section>
-            <h1>Achievements</h1>
-            <ul id="achievements"></ul>
-          </section>
-          <section class="skill-set">
-            <h1>Skills</h1>
-            <li id="skills"></li>
-          </section>
-          <section>
-            <h1>Education</h1>
-            <ul id="education"></ul>
-          </section>
-          <section>
-            <h1>Personal Interests</h1>
-            <ul id="interests"></ul>
-          </section>
-        </div>
-      </div>
+      <h2>About Me</h2>
+      <p id="aboutMe"></p>
+      <ul id="skills"></ul>
+      <h2>Achievements</h2>
+      <ul id="achievements"></ul>
+      <h2>Interests</h2>
+      <p id="interests"></p>
+      <h2>Education</h2>
+      <ul id="education"></ul>
+      <h2>Attributes</h2>
+      <ul id="attributes"></ul>
     </div>
+
     <script src="script.js"></script>
   </body>
 </html>
